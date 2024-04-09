@@ -7,15 +7,18 @@
 
 import Foundation
 
-struct Match: Decodable {
+
+struct Match: Identifiable, Codable {
+    var id: String = UUID().uuidString
     let away: String
     let date: String
-    let goal: Goal
     let home: String
     let win: String
+    let goal: Goal
 }
 
-struct Goal: Decodable {
-    let away: Int
+struct Goal: Codable {
     let home: Int
+    let away: Int
 }
+
