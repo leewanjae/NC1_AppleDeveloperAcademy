@@ -24,7 +24,8 @@ struct SplashView: View {
                     }
                     
                     DispatchQueue.global().asyncAfter(deadline: .now()) {
-                        crawling.crawl()
+//                        crawling.crawlingMatchup()
+                        crawling.crwalingResult()
                     }
                     
                 }
