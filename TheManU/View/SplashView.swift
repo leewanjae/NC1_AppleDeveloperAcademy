@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SplashView: View {
     @State private var isActive = false
+    @StateObject var crawling = Crawling()
     
     var body: some View {
         if isActive {
@@ -19,10 +20,13 @@ struct SplashView: View {
                 .ignoresSafeArea()
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                        withAnimation{
-                            isActive = true
-                        }
+                        isActive = true
                     }
+                    
+                    DispatchQueue.global().asyncAfter(deadline: .now()) {
+                        crawling.crawl()
+                    }
+                    
                 }
         }
     }

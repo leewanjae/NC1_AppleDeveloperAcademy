@@ -10,15 +10,10 @@ import Foundation
 
 struct Match: Identifiable, Codable {
     var id: String = UUID().uuidString
-    let away: String
-    let date: String
-    let home: String
+    let homeTeam: String
+    let awayTeam: String
+    let homeGoal: String
+    let awayGoal: String
     let win: String
-    let goal: Goal
+    let date: String
 }
-
-struct Goal: Codable {
-    let home: Int
-    let away: Int
-}
-
