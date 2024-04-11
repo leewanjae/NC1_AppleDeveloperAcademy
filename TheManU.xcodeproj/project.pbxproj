@@ -19,13 +19,16 @@
 		CCA6A01C2BC519C7005D69E9 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCA6A0132BC519C7005D69E9 /* Pretendard-SemiBold.otf */; };
 		CCA6A01D2BC519C7005D69E9 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCA6A0142BC519C7005D69E9 /* Pretendard-Bold.otf */; };
 		CCA6A01E2BC519C7005D69E9 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCA6A0152BC519C7005D69E9 /* Pretendard-Thin.otf */; };
+		CCC91CCB2BC595B80057805B /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = CCC91CCA2BC595B80057805B /* SwiftSoup */; };
+		CCC91CCE2BC595E30057805B /* Crawling.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC91CCD2BC595E30057805B /* Crawling.swift */; };
+		CCC91CD32BC774BC0057805B /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC91CD22BC774BC0057805B /* MatchResult.swift */; };
 		CCD935302BC42F6900590FBF /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD9352F2BC42F6900590FBF /* MatchesView.swift */; };
 		CCD935322BC42F6A00590FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD935312BC42F6A00590FBF /* Assets.xcassets */; };
 		CCD935352BC42F6A00590FBF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD935342BC42F6A00590FBF /* Preview Assets.xcassets */; };
 		CCD9353F2BC42F6A00590FBF /* TheManUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD9353E2BC42F6A00590FBF /* TheManUTests.swift */; };
 		CCD935492BC42F6A00590FBF /* TheManUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD935482BC42F6A00590FBF /* TheManUUITests.swift */; };
 		CCD9354B2BC42F6A00590FBF /* TheManUUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD9354A2BC42F6A00590FBF /* TheManUUITestsLaunchTests.swift */; };
-		CCD9355F2BC4352B00590FBF /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD9355E2BC4352B00590FBF /* Match.swift */; };
+		CCD9355F2BC4352B00590FBF /* MatchUP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD9355E2BC4352B00590FBF /* MatchUP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,8 @@
 		CCA6A0142BC519C7005D69E9 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		CCA6A0152BC519C7005D69E9 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		CCA6A01F2BC51A19005D69E9 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		CCC91CCD2BC595E30057805B /* Crawling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crawling.swift; sourceTree = "<group>"; };
+		CCC91CD22BC774BC0057805B /* MatchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResult.swift; sourceTree = "<group>"; };
 		CCD9352A2BC42F6900590FBF /* TheManU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheManU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD9352F2BC42F6900590FBF /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
 		CCD935312BC42F6A00590FBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +73,7 @@
 		CCD935442BC42F6A00590FBF /* TheManUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheManUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD935482BC42F6A00590FBF /* TheManUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheManUUITests.swift; sourceTree = "<group>"; };
 		CCD9354A2BC42F6A00590FBF /* TheManUUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheManUUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CCD9355E2BC4352B00590FBF /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		CCD9355E2BC4352B00590FBF /* MatchUP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchUP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCC91CCB2BC595B80057805B /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				CCD9352F2BC42F6900590FBF /* MatchesView.swift */,
-				CC24F1332BC43CDB00F2DDF9 /* MatchesVM.swift */,
 				CCA69FFE2BC514B7005D69E9 /* SplashView.swift */,
 				CCA6A0002BC5156B005D69E9 /* MyApp.swift */,
 			);
@@ -131,6 +136,22 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		CCC91CCC2BC595D20057805B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CCC91CCD2BC595E30057805B /* Crawling.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CCC91CCF2BC65ED50057805B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC24F1332BC43CDB00F2DDF9 /* MatchesVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		CCD935212BC42F6900590FBF = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +175,8 @@
 		CCD9352C2BC42F6900590FBF /* TheManU */ = {
 			isa = PBXGroup;
 			children = (
+				CCC91CCF2BC65ED50057805B /* ViewModel */,
+				CCC91CCC2BC595D20057805B /* Service */,
 				CCA6A0022BC51965005D69E9 /* Resources */,
 				CC24F1322BC43CAA00F2DDF9 /* View */,
 				CCD935602BC437DB00590FBF /* Model */,
@@ -192,7 +215,8 @@
 		CCD935602BC437DB00590FBF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CCD9355E2BC4352B00590FBF /* Match.swift */,
+				CCD9355E2BC4352B00590FBF /* MatchUP.swift */,
+				CCC91CD22BC774BC0057805B /* MatchResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +238,7 @@
 			);
 			name = TheManU;
 			packageProductDependencies = (
+				CCC91CCA2BC595B80057805B /* SwiftSoup */,
 			);
 			productName = TheManU;
 			productReference = CCD9352A2BC42F6900590FBF /* TheManU.app */;
@@ -288,6 +313,7 @@
 			);
 			mainGroup = CCD935212BC42F6900590FBF;
 			packageReferences = (
+				CCC91CC92BC595B80057805B /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 			);
 			productRefGroup = CCD9352B2BC42F6900590FBF /* Products */;
 			projectDirPath = "";
@@ -340,11 +366,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCC91CCE2BC595E30057805B /* Crawling.swift in Sources */,
 				CC24F1342BC43CDB00F2DDF9 /* MatchesVM.swift in Sources */,
 				CCA69FFF2BC514B7005D69E9 /* SplashView.swift in Sources */,
 				CCD935302BC42F6900590FBF /* MatchesView.swift in Sources */,
+				CCC91CD32BC774BC0057805B /* MatchResult.swift in Sources */,
 				CCA6A0012BC5156B005D69E9 /* MyApp.swift in Sources */,
-				CCD9355F2BC4352B00590FBF /* Match.swift in Sources */,
+				CCD9355F2BC4352B00590FBF /* MatchUP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +706,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CCC91CC92BC595B80057805B /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CCC91CCA2BC595B80057805B /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCC91CC92BC595B80057805B /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CCD935222BC42F6900590FBF /* Project object */;
 }
