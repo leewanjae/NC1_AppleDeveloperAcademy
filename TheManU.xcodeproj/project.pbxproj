@@ -106,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				CCD9352F2BC42F6900590FBF /* MatchesView.swift */,
-				CC24F1332BC43CDB00F2DDF9 /* MatchesVM.swift */,
 				CCA69FFE2BC514B7005D69E9 /* SplashView.swift */,
 				CCA6A0002BC5156B005D69E9 /* MyApp.swift */,
 			);
@@ -148,6 +147,7 @@
 		CCC91CCF2BC65ED50057805B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CC24F1332BC43CDB00F2DDF9 /* MatchesVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

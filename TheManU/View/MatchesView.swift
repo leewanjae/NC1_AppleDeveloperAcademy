@@ -14,9 +14,16 @@ struct MatchesView: View {
         VStack {
             Text(viewModel.matchup?.YM[0] ?? "")
         }
+        .background(
+            Image("manutd")
+            .resizable()
+            .frame(width: 300, height: 300)
+            .opacity(0.1))
         .onAppear {
-            viewModel.fetchMatchup()
-            viewModel.fetchMatchResult()
+            DispatchQueue.main.async {
+                viewModel.fetchMatchup()
+                viewModel.fetchMatchResult()
+            }
         }
     }
 }
