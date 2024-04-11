@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct MatchesView: View {
-    @StateObject private var viewModel = MatchesVM()
+    @StateObject var viewModel = MatchesVM()
     
     var body: some View {
-        Text("Hi")
+        VStack {
+            Text(viewModel.matchup?.YM[0] ?? "")
+        }
+        .onAppear {
+            viewModel.fetchMatchup()
+            viewModel.fetchMatchResult()
+        }
     }
 }
 

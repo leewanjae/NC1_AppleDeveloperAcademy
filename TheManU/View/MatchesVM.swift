@@ -8,5 +8,23 @@
 import Foundation
 
 class MatchesVM: ObservableObject {
-  
+    @Published var matchup: MatchUP?
+    @Published var matchResult: MatchResult?
+    
+    func fetchMatchup() {
+        Crawling().crawlingMatchup { [weak self] matches in
+            DispatchQueue.main.async {
+                self?.matchup = matches
+            }
+        }
+    }
+    
+    func fetchMatchResult() {
+        Crawling().crwalingResult { [weak self] matches in
+            DispatchQueue.main.async {
+                self?.matchResult = matches
+            }
+        }
+    }
+    
 }

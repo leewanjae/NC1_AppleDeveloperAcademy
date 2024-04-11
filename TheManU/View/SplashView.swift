@@ -22,12 +22,6 @@ struct SplashView: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                         isActive = true
                     }
-                    
-                    DispatchQueue.global().asyncAfter(deadline: .now()) {
-//                        crawling.crawlingMatchup()
-                        crawling.crwalingResult()
-                    }
-                    
                 }
         }
     }
