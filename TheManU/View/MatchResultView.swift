@@ -40,7 +40,6 @@ struct MatchResultView: View {
             .onAppear {
                 if !isDataLoaded {
                     viewModel.fetchMatchResult()
-                    viewModel.fetchMatchup()
                     isDataLoaded = true
                 }
             }

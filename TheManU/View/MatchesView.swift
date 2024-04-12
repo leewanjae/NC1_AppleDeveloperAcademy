@@ -26,10 +26,8 @@ struct MatchesView: View {
             
             ScrollView {
                 VStack {
-                    
-                    
                     ForEach(0..<(viewModel.matchup?.date.count ?? 0), id: \.self) { index in
-                        MatchesBtn(/*ym: viewModel.matchup?.YM[index] ?? "April 2024",*/ date: viewModel.matchup?.date[index] ?? "Saturday 13th April", matchTime: viewModel.matchup?.time[index] ?? "15:30", league: viewModel.matchup?.leage[index] ?? "Premier League", enemies: viewModel.matchup?.enemy[index] ?? "Bournemouth", action: {})
+                        MatchesBtn(date: viewModel.matchup?.date[index] ?? "Saturday 13th April", matchTime: viewModel.matchup?.time[index] ?? "15:30", league: viewModel.matchup?.leage[index] ?? "Premier League", enemies: viewModel.matchup?.enemy[index] ?? "Bournemouth", action: {})
                             .padding()
                     }
                 }
@@ -41,7 +39,6 @@ struct MatchesView: View {
                     .opacity(0.1))
             .onAppear {
                 if !isDataLoaded {
-                    viewModel.fetchMatchResult()
                     viewModel.fetchMatchup()
                     isDataLoaded = true
                 }

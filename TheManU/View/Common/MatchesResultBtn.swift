@@ -27,9 +27,9 @@ struct MatchesResultBtn: View {
                 ZStack {
                     Rectangle()
                         .cornerRadius(20)
-                        .frame(width: 370, height: 200)
+                        .frame(width: 370, height: 180)
                         .padding(.horizontal, 5)
-                        .shadow(color: .gray, radius: 15, x: 10, y: 10)
+                        .shadow(color: .gray.opacity(0.5), radius: 15, x: 10, y: 10)
                         .foregroundStyle(.white)
                     
                     HStack {

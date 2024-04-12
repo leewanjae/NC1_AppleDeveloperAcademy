@@ -20,9 +20,9 @@ struct MatchesBtn: View {
                 ZStack {
                     Rectangle()
                         .cornerRadius(20)
-                        .frame(width: 370, height: 200)
+                        .frame(width: 370, height: 180)
                         .padding(.horizontal, 5)
-                        .shadow(color: .gray, radius: 15, x: 10, y: 10)
+                        .shadow(color: .gray.opacity(0.5), radius: 15, x: 10, y: 10)
                         .foregroundStyle(.white)
                     
                     HStack {
@@ -41,7 +41,7 @@ struct MatchesBtn: View {
                                 .padding(7)
                                 .foregroundStyle(.gray)
                                 .bold()
-                               
+                            
                             Text(date)
                                 .font(Font.system(size: 17))
                                 .bold()
