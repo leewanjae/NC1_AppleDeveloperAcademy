@@ -1,13 +1,13 @@
 //
-//  MatchesView.swift
+//  MatchResultView.swift
 //  TheManU
 //
-//  Created by LeeWanJae on 4/8/24.
+//  Created by LeeWanJae on 4/12/24.
 //
 
 import SwiftUI
 
-struct MatchesView: View {
+struct MatchResultView: View {
     @State private var isDataLoaded = false
     @StateObject var viewModel = MatchesVM()
     
@@ -18,18 +18,16 @@ struct MatchesView: View {
                 .scaledToFit()
             
             HStack {
-                Text("Matches")
+                Text("Results")
                     .font(Font.system(size: 25, weight: .bold))
                     .padding()
                 Spacer()
             }
-            
             ScrollView {
                 VStack {
                     
-                    
-                    ForEach(0..<(viewModel.matchup?.date.count ?? 0), id: \.self) { index in
-                        MatchesBtn(/*ym: viewModel.matchup?.YM[index] ?? "April 2024",*/ date: viewModel.matchup?.date[index] ?? "Saturday 13th April", matchTime: viewModel.matchup?.time[index] ?? "15:30", league: viewModel.matchup?.leage[index] ?? "Premier League", enemies: viewModel.matchup?.enemy[index] ?? "Bournemouth", action: {})
+                    ForEach(0..<(viewModel.matchResult?.date.count ?? 0), id: \.self) { index in
+                        MatchesResultBtn(date: viewModel.matchResult?.date[index] ?? "", goal1: viewModel.matchResult?.goal[index] ?? "", goal2: viewModel.matchResult?.goal[index + 1] ?? "", league: viewModel.matchResult?.leage[index] ?? "", matchTeam1: viewModel.matchResult?.enemy[index] ?? "", matchTeam2: viewModel.matchResult?.enemy[index + 1] ?? "", action: {})
                             .padding()
                     }
                 }
@@ -51,5 +49,5 @@ struct MatchesView: View {
 }
 
 #Preview {
-    MatchesView()
+    MatchResultView()
 }

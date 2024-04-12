@@ -12,7 +12,7 @@ struct SplashView: View {
     
     var body: some View {
         if isActive {
-            MatchesView()
+            SegmentView()
         } else {
             Image("splash")
                 .resizable()

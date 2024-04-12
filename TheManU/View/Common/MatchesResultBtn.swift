@@ -1,17 +1,24 @@
 //
-//  MatchesBtn.swift
+//  MatchesResultBtn.swift
 //  TheManU
 //
-//  Created by LeeWanJae on 4/11/24.
+//  Created by LeeWanJae on 4/12/24.
 //
+// TODO: - 디자인 바꾸기
+// 1. 명암으로 높낮이를 주고
+// 2. 색상
+// 3. 비율 위에 정보가 많고 밑에는 정보가 적게 비대칭
+// 여백이 뭔가.... 너꺼다 내꺼다 잘 나누기 Your Feed -----------------------
 
 import SwiftUI
 
-struct MatchesBtn: View {
+struct MatchesResultBtn: View {
     var date: String
-    var matchTime: String
+    var goal1: String
+    var goal2: String
     var league: String
-    var enemies: String
+    var matchTeam1: String
+    var matchTeam2: String
     var action: () -> Void
     
     var body: some View {
@@ -31,25 +38,30 @@ struct MatchesBtn: View {
                                 .resizable()
                                 .frame(width: 50, height: 50)
                             
-                            Text("Machester United")
+                            Text(matchTeam1)
                                 .font(Font.system(size: 14))
                                 .frame(width: 100, height: 50)
                         }
-                        
+                      
                         VStack {
                             Text(league)
                                 .padding(7)
                                 .foregroundStyle(.gray)
                                 .bold()
-                               
-                            Text(date)
-                                .font(Font.system(size: 17))
-                                .bold()
                             
-                            Text(matchTime)
-                                .font(Font.system(size: 15))
+                            Text(date)
+                                .font(Font.system(size: 12))
                                 .padding(.bottom, 5)
-                            Text("VS")
+                            
+                            HStack {
+                                Text(goal1)
+                                Text(":")
+                                Text(goal2)
+                                    
+                            }
+                            .font(Font.system(size: 32))
+                            .bold()
+                            .padding(.bottom, 10)
                         }
                         .padding(.bottom, 30)
                         
@@ -57,8 +69,7 @@ struct MatchesBtn: View {
                             Image("manutd")
                                 .resizable()
                                 .frame(width: 50, height: 50)
-                            
-                            Text(enemies)
+                            Text(matchTeam2)
                                 .font(Font.system(size: 14))
                                 .frame(width: 100, height: 50)
                         }
@@ -71,7 +82,7 @@ struct MatchesBtn: View {
 }
 
 #Preview {
-    MatchesBtn(date:"Saturday 13th April", matchTime: "15:30", league: "Premier League", enemies: "Bournemouth") {
+    MatchesResultBtn(date: "Saturday 13th April", goal1: "3", goal2: "3", league: "Premier League", matchTeam1: "Manchester United", matchTeam2: "Bournemouth") {
         print("버튼 클릭")
     }
 }

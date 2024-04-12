@@ -26,5 +26,4 @@ class MatchesVM: ObservableObject {
             }
         }
     }
-    
 }

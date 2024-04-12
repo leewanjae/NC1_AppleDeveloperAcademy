@@ -40,7 +40,7 @@ class Crawling: ObservableObject {
             let matchup: Elements = try doc.select(".swap-text__target") // .swap-text__target 경기 팀
             for team in matchup {
                 let teamText = try team.text()
-                if teamText != "Manchester United" {
+                if teamText != "Manchester United" && !teamText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                     enemieArr.append(teamText)
                 }
             }
@@ -64,9 +64,7 @@ class Crawling: ObservableObject {
                 ymArr.append(ymText)
             }
             matchups = MatchUP(leage: leagueArr, YM: ymArr, date: dateArr, time: timeArr, enemy: enemieArr)
-            completion(matchups)
-            print("매치 일정입니다: \(matchups)")
-            
+            completion(matchups)            
         } catch {
             print("error")
         }
@@ -98,7 +96,7 @@ class Crawling: ObservableObject {
             let matchup: Elements = try doc.select(".swap-text__target")
             for team in matchup {
                 let teamText = try team.text()
-                if teamText != "Manchester United" {
+                if !teamText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                     enemieArr.append(teamText)
                 }
             }
@@ -123,7 +121,6 @@ class Crawling: ObservableObject {
             
             matchResult = MatchResult(leage: leagueArr, YM: ymArr, date: dateArr, goal: goalArr, enemy: enemieArr)
             completion(matchResult)
-            print("매치 결과입니다: \(matchResult)")
         } catch {
             print("error")
         }
