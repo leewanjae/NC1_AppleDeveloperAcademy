@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class MatchesVM: ObservableObject {
     @Published var matchup: MatchUP?
@@ -26,5 +27,4 @@ class MatchesVM: ObservableObject {
             }
         }
     }
-    
 }

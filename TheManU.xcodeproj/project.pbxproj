@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CC24F1342BC43CDB00F2DDF9 /* MatchesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC24F1332BC43CDB00F2DDF9 /* MatchesVM.swift */; };
+		CC5E054A2BC8B7D4002F80E3 /* MatchesResultBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5E05492BC8B7D4002F80E3 /* MatchesResultBtn.swift */; };
+		CC5E054C2BC8F847002F80E3 /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5E054B2BC8F847002F80E3 /* SegmentView.swift */; };
+		CC5E054E2BC8F8D8002F80E3 /* MatchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5E054D2BC8F8D8002F80E3 /* MatchResultView.swift */; };
+		CC7E465A2BC7C4A5009BA031 /* MatchesBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7E46592BC7C4A5009BA031 /* MatchesBtn.swift */; };
 		CCA69FFF2BC514B7005D69E9 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA69FFE2BC514B7005D69E9 /* SplashView.swift */; };
 		CCA6A0012BC5156B005D69E9 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA6A0002BC5156B005D69E9 /* MyApp.swift */; };
 		CCA6A0162BC519C7005D69E9 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCA6A00D2BC519C6005D69E9 /* Pretendard-Black.otf */; };
@@ -50,6 +54,10 @@
 
 /* Begin PBXFileReference section */
 		CC24F1332BC43CDB00F2DDF9 /* MatchesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesVM.swift; sourceTree = "<group>"; };
+		CC5E05492BC8B7D4002F80E3 /* MatchesResultBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResultBtn.swift; sourceTree = "<group>"; };
+		CC5E054B2BC8F847002F80E3 /* SegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
+		CC5E054D2BC8F8D8002F80E3 /* MatchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResultView.swift; sourceTree = "<group>"; };
+		CC7E46592BC7C4A5009BA031 /* MatchesBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesBtn.swift; sourceTree = "<group>"; };
 		CCA69FFE2BC514B7005D69E9 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		CCA6A0002BC5156B005D69E9 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 		CCA6A00D2BC519C6005D69E9 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
@@ -105,11 +113,23 @@
 		CC24F1322BC43CAA00F2DDF9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CCD9352F2BC42F6900590FBF /* MatchesView.swift */,
+				CC7E465B2BC7C4AB009BA031 /* Common */,
 				CCA69FFE2BC514B7005D69E9 /* SplashView.swift */,
+				CCD9352F2BC42F6900590FBF /* MatchesView.swift */,
+				CC5E054D2BC8F8D8002F80E3 /* MatchResultView.swift */,
 				CCA6A0002BC5156B005D69E9 /* MyApp.swift */,
+				CC5E054B2BC8F847002F80E3 /* SegmentView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CC7E465B2BC7C4AB009BA031 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CC7E46592BC7C4A5009BA031 /* MatchesBtn.swift */,
+				CC5E05492BC8B7D4002F80E3 /* MatchesResultBtn.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		CCA6A0022BC51965005D69E9 /* Resources */ = {
@@ -366,12 +386,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5E054A2BC8B7D4002F80E3 /* MatchesResultBtn.swift in Sources */,
 				CCC91CCE2BC595E30057805B /* Crawling.swift in Sources */,
 				CC24F1342BC43CDB00F2DDF9 /* MatchesVM.swift in Sources */,
 				CCA69FFF2BC514B7005D69E9 /* SplashView.swift in Sources */,
+				CC5E054E2BC8F8D8002F80E3 /* MatchResultView.swift in Sources */,
 				CCD935302BC42F6900590FBF /* MatchesView.swift in Sources */,
+				CC7E465A2BC7C4A5009BA031 /* MatchesBtn.swift in Sources */,
 				CCC91CD32BC774BC0057805B /* MatchResult.swift in Sources */,
 				CCA6A0012BC5156B005D69E9 /* MyApp.swift in Sources */,
+				CC5E054C2BC8F847002F80E3 /* SegmentView.swift in Sources */,
 				CCD9355F2BC4352B00590FBF /* MatchUP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
