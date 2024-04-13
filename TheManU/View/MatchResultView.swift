@@ -27,7 +27,7 @@ struct MatchResultView: View {
                 VStack {
                     
                     ForEach(0..<(viewModel.matchResult?.date.count ?? 0), id: \.self) { index in
-                        MatchesResultBtn(date: viewModel.matchResult?.date[index] ?? "", goal1: viewModel.matchResult?.goal[index] ?? "", goal2: viewModel.matchResult?.goal[index + 1] ?? "", league: viewModel.matchResult?.leage[index] ?? "", matchTeam1: viewModel.matchResult?.enemy[index] ?? "", matchTeam2: viewModel.matchResult?.enemy[index + 1] ?? "", action: {})
+                        MatchesResultBtn(date: viewModel.matchResult?.date[index] ?? "", goal: viewModel.matchResult?.goal[index] ?? "", league: viewModel.matchResult?.leage[index] ?? "", matchTeam: viewModel.matchResult?.enemy[index] ?? "", action: {})
                             .padding()
                     }
                 }

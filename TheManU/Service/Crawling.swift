@@ -86,6 +86,7 @@ class Crawling: ObservableObject {
         var enemieArr: [String] = []
         var leagueArr: [String] = []
         var goalArr: [String] = []
+        var formattGoalArr: [String] = []
         var ymArr: [String] = []
         
         guard let url = URL(string: url) else { return print("url error") }
@@ -107,7 +108,7 @@ class Crawling: ObservableObject {
                 let matchup: Elements = try doc.select(".swap-text__target")
                 for team in matchup {
                     let teamText = try team.text()
-                    if !teamText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                    if teamText != "Manchester United" && !teamText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                         enemieArr.append(teamText)
                     }
                 }
@@ -123,6 +124,10 @@ class Crawling: ObservableObject {
                     let goalText = try goal.text()
                     goalArr.append(goalText)
                 }
+                for i in stride(from: 0, to: goalArr.count, by: 2) {
+                    let formatter = "\(goalArr[i]) : \(goalArr[i + 1])"
+                    formattGoalArr.append(formatter)
+                }
                 
                 let months: Elements = try doc.select(".fixres__header1")
                 for month in months {
@@ -130,7 +135,13 @@ class Crawling: ObservableObject {
                     ymArr.append(ymText)
                 }
                 
-                self.matchResult = MatchResult(leage: leagueArr, YM: ymArr, date: dateArr, goal: goalArr, enemy: enemieArr)
+                self.matchResult = MatchResult(leage: leagueArr, YM: ymArr, date: dateArr, goal: formattGoalArr, enemy: enemieArr)
+                print("league", self.matchResult.leage.count)
+                print("ym", self.matchResult.YM.count)
+                print("date", self.matchResult.date.count)
+                print("goal", self.matchResult.goal.count)
+                print("enemy", self.matchResult.enemy.count)
+                print(self.matchResult.goal)
                 completion(self.matchResult)
             } catch {
                 print("error")

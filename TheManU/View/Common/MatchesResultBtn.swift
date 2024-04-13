@@ -14,11 +14,9 @@ import SwiftUI
 
 struct MatchesResultBtn: View {
     var date: String
-    var goal1: String
-    var goal2: String
+    var goal: String
     var league: String
-    var matchTeam1: String
-    var matchTeam2: String
+    var matchTeam: String
     var action: () -> Void
     
     var body: some View {
@@ -38,7 +36,7 @@ struct MatchesResultBtn: View {
                                 .resizable()
                                 .frame(width: 50, height: 50)
                             
-                            Text(matchTeam1)
+                            Text("Manchester United")
                                 .font(Font.system(size: 14))
                                 .frame(width: 100, height: 50)
                         }
@@ -54,9 +52,7 @@ struct MatchesResultBtn: View {
                                 .padding(.bottom, 5)
                             
                             HStack {
-                                Text(goal1)
-                                Text(":")
-                                Text(goal2)
+                                Text(goal)
                                     
                             }
                             .font(Font.system(size: 32))
@@ -69,7 +65,7 @@ struct MatchesResultBtn: View {
                             Image("manutd")
                                 .resizable()
                                 .frame(width: 50, height: 50)
-                            Text(matchTeam2)
+                            Text(matchTeam)
                                 .font(Font.system(size: 14))
                                 .frame(width: 100, height: 50)
                         }
@@ -82,7 +78,7 @@ struct MatchesResultBtn: View {
 }
 
 #Preview {
-    MatchesResultBtn(date: "Saturday 13th April", goal1: "3", goal2: "3", league: "Premier League", matchTeam1: "Manchester United", matchTeam2: "Bournemouth") {
+    MatchesResultBtn(date: "Saturday 13th April", goal: "3 : 3", league: "Premier League", matchTeam: "Bournemouth") {
         print("버튼 클릭")
     }
 }
