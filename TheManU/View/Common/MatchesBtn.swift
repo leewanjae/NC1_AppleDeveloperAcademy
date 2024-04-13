@@ -11,6 +11,7 @@ struct MatchesBtn: View {
     var date: String
     var matchTime: String
     var league: String
+    var imageName: String
     var enemies: String
     var action: () -> Void
     
@@ -54,7 +55,7 @@ struct MatchesBtn: View {
                         .padding(.bottom, 30)
                         
                         VStack {
-                            Image("manutd")
+                            Image(imageName)
                                 .resizable()
                                 .frame(width: 50, height: 50)
                             
@@ -71,7 +72,7 @@ struct MatchesBtn: View {
 }
 
 #Preview {
-    MatchesBtn(date:"Saturday 13th April", matchTime: "15:30", league: "Premier League", enemies: "Bournemouth") {
+    MatchesBtn(date:"Saturday 13th April", matchTime: "15:30", league: "Premier League", imageName: "Liverpool", enemies: "Bournemouth") {
         print("버튼 클릭")
     }
 }

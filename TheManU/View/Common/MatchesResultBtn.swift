@@ -16,6 +16,7 @@ struct MatchesResultBtn: View {
     var date: String
     var goal: String
     var league: String
+    var imageName: String
     var matchTeam: String
     var action: () -> Void
     
@@ -40,7 +41,7 @@ struct MatchesResultBtn: View {
                                 .font(Font.system(size: 14))
                                 .frame(width: 100, height: 50)
                         }
-                      
+                        
                         VStack {
                             Text(league)
                                 .padding(7)
@@ -53,7 +54,7 @@ struct MatchesResultBtn: View {
                             
                             HStack {
                                 Text(goal)
-                                    
+                                
                             }
                             .font(Font.system(size: 32))
                             .bold()
@@ -62,7 +63,7 @@ struct MatchesResultBtn: View {
                         .padding(.bottom, 30)
                         
                         VStack {
-                            Image("manutd")
+                            Image(imageName)
                                 .resizable()
                                 .frame(width: 50, height: 50)
                             Text(matchTeam)
@@ -78,7 +79,7 @@ struct MatchesResultBtn: View {
 }
 
 #Preview {
-    MatchesResultBtn(date: "Saturday 13th April", goal: "3 : 3", league: "Premier League", matchTeam: "Bournemouth") {
+    MatchesResultBtn(date: "Saturday 13th April", goal: "3 : 3", league: "Premier League", imageName: "Chelsea", matchTeam: "Bournemouth") {
         print("버튼 클릭")
     }
 }

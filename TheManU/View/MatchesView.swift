@@ -27,7 +27,7 @@ struct MatchesView: View {
             ScrollView {
                 VStack {
                     ForEach(0..<(viewModel.matchup?.date.count ?? 0), id: \.self) { index in
-                        MatchesBtn(date: viewModel.matchup?.date[index] ?? "Saturday 13th April", matchTime: viewModel.matchup?.time[index] ?? "15:30", league: viewModel.matchup?.leage[index] ?? "Premier League", enemies: viewModel.matchup?.enemy[index] ?? "Bournemouth", action: {})
+                        MatchesBtn(date: viewModel.matchup?.date[index] ?? "Saturday 13th April", matchTime: viewModel.matchup?.time[index] ?? "15:30", league: viewModel.matchup?.leage[index] ?? "Premier League", imageName: viewModel.matchup?.enemy[index] ?? "Soccer", enemies: viewModel.matchup?.enemy[index] ?? "Bournemouth", action: {})
                             .padding()
                     }
                 }

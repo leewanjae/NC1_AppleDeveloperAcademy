@@ -136,13 +136,8 @@ class Crawling: ObservableObject {
                 }
                 
                 self.matchResult = MatchResult(leage: leagueArr, YM: ymArr, date: dateArr, goal: formattGoalArr, enemy: enemieArr)
-                print("league", self.matchResult.leage.count)
-                print("ym", self.matchResult.YM.count)
-                print("date", self.matchResult.date.count)
-                print("goal", self.matchResult.goal.count)
-                print("enemy", self.matchResult.enemy.count)
-                print(self.matchResult.goal)
                 completion(self.matchResult)
+                print(self.matchResult.enemy)
             } catch {
                 print("error")
             }
