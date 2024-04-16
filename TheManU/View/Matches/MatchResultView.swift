@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MatchResultView: View {
     @State private var isDataLoaded = false
+    @State private var isShowSheet = false
     @StateObject var viewModel = MatchesVM()
     
     var body: some View {
@@ -25,10 +26,14 @@ struct MatchResultView: View {
             }
             ScrollView {
                 VStack {
-                    
                     ForEach(0..<(viewModel.matchResult?.date.count ?? 0), id: \.self) { index in
-                        MatchesResultBtn(date: viewModel.matchResult?.date[index] ?? "", goal: viewModel.matchResult?.goal[index] ?? "", league: viewModel.matchResult?.leage[index] ?? "", imageName: viewModel.matchResult?.enemy[index] ?? "", matchTeam: viewModel.matchResult?.enemy[index] ?? "", action: {})
-                            .padding()
+                        MatchesResultBtn(date: viewModel.matchResult?.date[index] ?? "", goal: viewModel.matchResult?.goal[index] ?? "", league: viewModel.matchResult?.leage[index] ?? "", imageName: viewModel.matchResult?.enemy[index] ?? "", matchTeam: viewModel.matchResult?.enemy[index] ?? "", action: {
+                            isShowSheet = true
+                        })
+                        .padding()
+                        .sheet(isPresented: $isShowSheet, content: {
+                            DiaryView()
+                        })
                     }
                 }
             }
