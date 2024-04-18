@@ -12,11 +12,21 @@ struct DiaryDetailView: View {
     
     var body: some View {
         VStack {
+            Text(diaryEntity.matchDate ?? "")
+            HStack {
+                Spacer()
+                
+                Text("ManChester Utd vs")
+                Text(diaryEntity.enemies ?? "")
+                Spacer()
+            }
+            Text(diaryEntity.goal ?? "")
+            
             HStack {
                 Text(diaryEntity.context ?? "")
                     .font(Font.system(size: 16))
                     .multilineTextAlignment(.leading)
-                   
+                
                 Spacer()
             }
             .padding()

@@ -32,14 +32,17 @@ class DiaryViewModel: ObservableObject {
         }
     }
     
-    func addDiary(context: String, listTitle: String) {
+    func addDiary(context: String, listTitle: String, enemies: String, goal: String, matchDate: String) {
         let diary = DiariesEntity(context: container.viewContext)
         diary.context = context
         diary.listTitle = listTitle
+        diary.enemies = enemies
+        diary.goal = goal
+        diary.matchDate = matchDate
         self.saveData()
         print("Add Complete: + \(diary)")
     }
-    
+
     func deleteDiary(indexSet: IndexSet) {
         guard let index = indexSet.first else { return }
         let entity = diariesEntity[index]

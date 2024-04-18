@@ -22,13 +22,6 @@ struct MatchesView: View {
                 Text("Matches")
                     .font(Font.system(size: 25, weight: .bold))
                     .padding()
-                
-                NavigationLink {
-                    DiaryListView()
-                } label: {
-                    Image(systemName: "doc.plaintext")
-                }
-                
                 Spacer()
             }
             

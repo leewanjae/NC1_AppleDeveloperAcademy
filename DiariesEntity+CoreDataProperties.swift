@@ -19,6 +19,10 @@ extension DiariesEntity {
     @NSManaged public var id: UUID?
     @NSManaged public var context: String?
     @NSManaged public var listTitle: String?
+    @NSManaged public var enemies: String?
+    @NSManaged public var goal: String?
+    @NSManaged public var matchDate: String?
+
 
 }
 

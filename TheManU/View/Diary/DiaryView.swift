@@ -66,7 +66,7 @@ struct DiaryView: View {
                 .onAppear(perform: UIApplication.shared.hideKeyboard)
             
             Button(action: {
-                viewModel.addDiary(context: text, listTitle: titleText)
+                viewModel.addDiary(context: text, listTitle: titleText, enemies: matchResult.enemy[selectedIndex], goal: matchResult.goal[selectedIndex], matchDate: matchResult.date[selectedIndex])
                 isShowSheet = false
             }, label: {
                 Text("Add")
