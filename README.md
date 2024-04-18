@@ -1,3 +1,7 @@
+# NC1_AppleDeveloperAcademy The ManU
+SwiftUI<br/>
+SwiftSoup - Crwaling<br/>
+CoreData - 데이터 관리<br/>
 ## UI
 ![NC1](https://github.com/leewanjae/NC1_AppleDeveloperAcademy/assets/124972698/015c6a0c-4238-46e1-acee-161dda9ee44b)
 
