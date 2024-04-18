@@ -25,7 +25,7 @@ class Crawling: ObservableObject {
         guard let url = URL(string: url) else { return print("url error") }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data, let httpResponse = response as? HTTPURLResponse,
+            guard let _ = data, let httpResponse = response as? HTTPURLResponse,
                   (200...299).contains(httpResponse.statusCode),
                   error == nil else {
                 print("네트워크 요청 중 오류 발생: \(error!)")

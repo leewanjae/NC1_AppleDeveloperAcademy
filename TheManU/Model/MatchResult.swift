@@ -5,9 +5,9 @@
 //  Created by LeeWanJae on 4/11/24.
 //
 
-import Foundation
+import SwiftUI
 
-struct MatchResult: Identifiable, Codable {
+struct MatchResult: Identifiable {
     var id: String = UUID().uuidString
     let leage: [String]
     let YM: [String]

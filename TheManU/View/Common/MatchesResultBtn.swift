@@ -4,11 +4,6 @@
 //
 //  Created by LeeWanJae on 4/12/24.
 //
-// TODO: - 디자인 바꾸기
-// 1. 명암으로 높낮이를 주고
-// 2. 색상
-// 3. 비율 위에 정보가 많고 밑에는 정보가 적게 비대칭
-// 여백이 뭔가.... 너꺼다 내꺼다 잘 나누기 Your Feed -----------------------
 
 import SwiftUI
 
@@ -63,9 +58,16 @@ struct MatchesResultBtn: View {
                         .padding(.bottom, 30)
                         
                         VStack {
-                            Image(imageName)
-                                .resizable()
-                                .frame(width: 50, height: 50)
+                            if teamLogoList.contains(where: { imageName.contains($0) }) {
+                                Image(imageName)
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                            } else {
+                                Image("Soccer")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                            }
+                            
                             Text(matchTeam)
                                 .font(Font.system(size: 14))
                                 .frame(width: 100, height: 50)
