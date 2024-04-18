@@ -55,9 +55,15 @@ struct MatchesBtn: View {
                         .padding(.bottom, 30)
                         
                         VStack {
-                            Image(imageName)
-                                .resizable()
-                                .frame(width: 50, height: 50)
+                            if teamLogoList.contains(where: { imageName.contains($0) }) {
+                                Image(imageName)
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                            } else {
+                                Image("Soccer")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                            }
                             
                             Text(enemies)
                                 .font(Font.system(size: 14))

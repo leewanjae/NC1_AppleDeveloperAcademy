@@ -9,9 +9,8 @@ import Foundation
 import CoreData
 
 class DiaryViewModel: ObservableObject {
-    var container: NSPersistentContainer
-    
-    @Published var diaryEntity: [DiaryEntity] = []
+    @Published var container: NSPersistentContainer
+    @Published var diariesEntity: [DiariesEntity] = []
     
     init() {
         container = NSPersistentContainer(name: "Model")
@@ -25,27 +24,27 @@ class DiaryViewModel: ObservableObject {
     }
     
     func fetchDiary() {
-        let request = NSFetchRequest<DiaryEntity>(entityName: "DiaryEntity")
+        let request = NSFetchRequest<DiariesEntity>(entityName: "DiariesEntity")
         do {
-            diaryEntity = try container.viewContext.fetch(request)
-            print(diaryEntity)
+            diariesEntity = try container.viewContext.fetch(request)
         } catch let error {
             print("ERROR FETCHING CORE DATA \(error)")
         }
     }
     
-    func addDiary(context: String) {
-        let diary = DiaryEntity(context: container.viewContext)
+    func addDiary(context: String, listTitle: String) {
+        let diary = DiariesEntity(context: container.viewContext)
         diary.context = context
+        diary.listTitle = listTitle
         self.saveData()
+        print("Add Complete: + \(diary)")
     }
     
     func deleteDiary(indexSet: IndexSet) {
         guard let index = indexSet.first else { return }
-        let entity = diaryEntity[index]
+        let entity = diariesEntity[index]
         container.viewContext.delete(entity)
         self.saveData()
-
     }
     
     func saveData() {

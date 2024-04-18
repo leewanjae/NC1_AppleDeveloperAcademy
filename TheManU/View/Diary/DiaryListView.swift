@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct DiaryListView: View {
-    @StateObject var viewModel = DiaryViewModel()
+    @State var isSelection: Bool = false
+    @ObservedObject var viewModel = DiaryViewModel()
     
     var body: some View {
-        List {
-            Text("Cell1")
+        VStack {
+            List {
+                ForEach(viewModel.diariesEntity, id: \.self) { diary in
+                    NavigationLink {
+                        DiaryDetailView(diaryEntity: diary)
+                    } label: {
+                        Text("\(diary.listTitle ?? "")")
+                    }
+                }
+                .onDelete(perform: { indexSet in
+                    viewModel.deleteDiary(indexSet: indexSet )
+                })
+            }
         }
-        
+        .navigationTitle("List")
+        .onAppear {
+            viewModel.fetchDiary()
+        }
     }
 }
 
